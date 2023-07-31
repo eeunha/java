@@ -164,6 +164,22 @@ public class Ex36_Class {
 		// Objectaid > UML 확장 프로그램
 		//- Class Diagram
 		
+		//UML, Unified Modeling Language
+		//- 프로그램의 설계도를 만드는 언어
+		//- 수많은 종류의 설계도
+		// a. Class Diagram
+		// b. Package Diagram
+		// c. Object Diagram
+		// d. Component Diagram
+		// e. Sequence Diagram
+		// f. UseCase Diagram
+		// g. Activity Diagram
+		// h. State Diagram ...
+		
+		// Drag & Drop
+		
+		
+		
 		
 	}// main
 }// class
