@@ -1,0 +1,22 @@
+package com.test.question;
+
+public class Q010 {
+	public static void main(String[] args) {
+		digit(1);
+		digit(12);
+		digit(321);
+		digit(5678);
+		digit(98765);
+	}
+
+	private static void digit(int num) {
+		// TODO Auto-generated method stub
+//		String result = num + "";
+//		
+//		result = (result.length() >= 4) ? result: String.format("%04s", result);
+//
+//		System.out.println(num + " → " + result);
+		String result = (num >= 1000) ? num + "" : String.format("%04d", num);
+		System.out.println(num + " → " + result);
+	}
+}

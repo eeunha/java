@@ -1,0 +1,66 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+/*
+
+2023.07.27
+
+Q. 성적을 입력받아 아래와 같이 출력하시오.
+
+조건
+- String[][] score = new String[10][3];
+
+입력
+국어 점수: 80 
+영어 점수: 50 
+수학 점수: 70 
+
+출력
+ 	 	 
+ 	 	 
+■		
+■		■
+■		■
+■	■	■
+■	■	■
+■	■	■
+■	■	■
+■	■	■
+-----------
+국어	영어	수학
+
+*/
+public class Q076 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		String[][] score = new String[10][3];
+		
+		int[][] nums = new int[5][5];
+		int value = 1;
+		
+		System.out.print("국어 점수: ");
+		int kor = scan.nextInt();
+		
+		System.out.print("영어 점수: ");
+		int eng = scan.nextInt();
+		
+		System.out.print("수학 점수: ");
+		int math = scan.nextInt();
+		
+		
+		
+		printArr(nums);
+	}
+
+	private static void printArr(int[][] nums) {
+		// 출력 > 수정없이 그대로 사용
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				System.out.printf("%5d", nums[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}

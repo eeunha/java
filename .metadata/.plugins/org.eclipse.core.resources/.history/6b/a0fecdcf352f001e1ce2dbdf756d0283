@@ -1,0 +1,13 @@
+package com.test.java.obj;
+
+//2023.07.31
+public class Ex36_Class {
+	public static void main(String[] args) {
+		// Ex36_Class.java
+
+		//자바
+		// - 객체 지향 프로그래밍 언어, Object Oriented Programming
+		// 
+	
+	}// main
+}

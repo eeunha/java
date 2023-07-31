@@ -1,0 +1,13 @@
+package com.test.question;
+
+public class Q063 {
+	public static void main(String[] args) {
+
+	}
+
+	private static String dump(int[] list) {
+		String result = "";
+
+		return result;
+	}
+}

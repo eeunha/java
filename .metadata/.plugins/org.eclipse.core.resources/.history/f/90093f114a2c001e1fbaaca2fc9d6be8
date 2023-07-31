@@ -1,0 +1,55 @@
+package com.test.question;
+
+/*
+
+2023.07.27
+
+Q. 아래와 같이 출력하시오.
+
+1	2	3	4	10
+5	6	7	8	26
+9	10	11	12	42
+13	14	15	16	58
+28	32	26	40	136
+
+
+
+*/
+public class Q075 {
+	public static void main(String[] args) {
+		int[][] nums = new int[5][5];
+		int value = 1;
+		int sum = 0;
+
+		for (int i = 0; i < nums.length - 1; i++) { // 0 ~ 3행 채우기
+			sum = 0;
+			for (int j = 0; j < nums[0].length - 1; j++) {
+				nums[i][j] = value;
+				sum += value++;
+			}
+			nums[i][nums[0].length - 1] = sum; // j = 4
+		}
+
+		// 4행 채우기
+		for (int i = 0; i < nums.length - 1; i++) {
+			sum = 0;
+			for (int j = 0; j < nums.length - 1; j++) {
+				sum += nums[j][i];
+				System.out.printf("nums[%d][%d] = %d ", j,i,nums[j][i]);
+			}
+//			nums[nums[0].length][i] = sum;
+		}
+
+		printArr(nums);
+	}
+
+	private static void printArr(int[][] nums) {
+		// 출력 > 수정없이 그대로 사용
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				System.out.printf("%5d", nums[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}

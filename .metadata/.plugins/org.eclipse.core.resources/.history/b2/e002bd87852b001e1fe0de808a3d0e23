@@ -1,0 +1,66 @@
+package com.test.question;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Q067 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		int[] nums = new int[10];
+		int temp = 0;
+
+		System.out.print("삽입 위치: ");
+		int index = scan.nextInt();
+
+		System.out.print("값: ");
+		int value = scan.nextInt();
+
+		// 배열에 넣을 요소 개수를 난수로 생성한다.
+		int valCount = (int) (Math.random() * (10 - index)) + index + 1; // index+1 ~ nums.length
+//		System.out.println("valCount: " + valCount);
+		for (int i = 0; i < valCount; i++) { // valCount 개 만큼 요소 넣기
+			nums[i] = (int) (Math.random() * 10) + 1;
+		}
+
+		System.out.println("원본: " + Arrays.toString(nums));
+
+		// nums[index] = value
+		// 로 바꾸고 기존 값 오른 쪽으로 밀기.
+		// 밀 때 배열의 길이를 넘어가면 버림.
+		// valCount = nums[]의 처음으로 빈 인덱스 -> x
+		// temp로 값을 하나씩 뒤로 민다.
+
+		/*
+		 * index = 2, value = 100 [5, 6, 1, 3, 2, 0, 0, 0, 0, 0] ^ temp = nums[index];
+		 * -> temp = nums[2] = 1 [5, 6, 1, 3, 2, 0, 0, 0, 0, 0] ^ nums[index] = value;
+		 * -> nums[2] = 100 [5, 6, 100, 3, 2, 0, 0, 0, 0, 0] temp = 1; nums[index+1] =
+		 * temp; -> nums[3] = 1
+		 * 
+		 * 
+		 */
+
+//		temp = nums[index];
+//		nums[index] = value;
+//		nums[index+1] = temp;
+//		index++;
+//		System.out.println("원본: " + Arrays.toString(nums));
+//		while (index < nums.length - 1) {
+//			temp = nums[index];
+//			nums[index] = nums[index + 1];
+//			nums[index + 1] = temp;
+//			index++;
+//			System.out.println("원본: " + Arrays.toString(nums));
+//		}
+
+		if (index == nums.length - 1) { // 배열의 마지막 자리일 경우 바로 넣고 종료.
+			nums[index++] = value;
+		} else {
+			while (index < nums.length - 1) {
+
+			}
+		}
+
+		System.out.println("결과: " + Arrays.toString(nums));
+	}
+}

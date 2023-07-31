@@ -1,0 +1,20 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+public class Q014 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("역의 개수: ");
+		int station = scan.nextInt();
+
+		System.out.print("환승역의 횟수: ");
+		int change = scan.nextInt();
+
+		System.out.print("시간대(1.평상시, 2.출근시, 3.퇴근시): ");
+		int time = scan.nextInt();
+		
+		System.out.printf("총 소요 시간은 %d분입니다.", getTime(station, change, time));
+	}
+}

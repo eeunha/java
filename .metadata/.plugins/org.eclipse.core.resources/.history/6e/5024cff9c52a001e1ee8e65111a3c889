@@ -1,0 +1,48 @@
+package com.test.question;
+
+public class Q042 {
+	public static void main(String[] args) {
+		int year = 2023;
+		int month = 7;
+		int date = 25;
+
+		int dayCount = 0;
+		String dayOfWeek = "";
+
+		// 윤년인지 확인
+		// 윤년이라면 366일
+		// 평년이라면 365일
+
+		// 서기 1년 1월 1일 ~ year-1년 12월 31일 까지의 일수 더하기
+
+		// dayCount = 365 * (year-1)
+		dayCount = 365 * (year - 1);
+		System.out.println(dayCount);
+
+		// dayCount += 작년까지의 년 중에서 윤년의 개수
+		dayCount += countLeapYear(year);
+		System.out.println(dayCount);
+
+		// 올해 일수 구하기
+
+		System.out.printf("%d년 %d월 %d일은 %,d일째 되는 날이고 %s요일입니다.", year, month, date, dayCount, dayOfWeek);
+	}
+
+	public static int countLeapYear(int year) {
+		int count = 0;
+		for (int i = 1; i < year; i++) {
+			if (year % 4 == 0) {
+				if (year % 100 == 0) {
+					if (year % 400 == 0) {
+						count++;
+					}
+				} else {}
+				else {
+					count++;
+				}
+			}
+		}
+		System.out.println(syso);
+		return count;
+	}
+}

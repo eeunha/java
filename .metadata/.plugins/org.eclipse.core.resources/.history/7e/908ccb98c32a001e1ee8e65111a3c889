@@ -1,0 +1,18 @@
+package com.test.question;
+
+public class Q060 {
+	public static void main(String[] args) {
+		// 현재 수 + 직전 수 더해서 다음 수 만들기
+		int curNum = 1;
+		int sum = 0;
+		int lastNum = 0;
+		System.out.print(curNum + " + ");
+		while (curNum <= 100) {
+			System.out.print(lastNum + curNum + " + ");
+			int temp = curNum;
+			curNum += lastNum;
+			lastNum = temp;
+		}
+		System.out.println("= " + sum);
+	}
+}

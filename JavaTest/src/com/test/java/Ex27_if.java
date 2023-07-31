@@ -9,15 +9,26 @@ public class Ex27_if {
 		// Ex27_if.java
 
 		/*
-		 * 제어문 - 수많은 명령어들의 흐름(실행 순서)을 통제하는 수단 - 조건 제어, 반복 제어, 분기 제어
+		 * 제어문 - 수많은 명령어들의 흐름(실행 순서)을 통제하는 수단 
+		 * - 조건 제어, 반복 제어, 분기 제어
 		 * 
-		 * 1. 조건문 - 개발자가 조건을 제시한 후 결과에 따라 흐름을 제어 a. if b. switch
+		 * 1. 조건문 
+		 * - 개발자가 조건을 제시한 후 결과에 따라 흐름을 제어 
+		 * a. if 
+		 * b. switch
 		 * 
-		 * 2. 반복문 - 특정 코드를 개발자가 원하는 횟수만큼 반복 제어 a. for b. while c. do while d. for(for
-		 * each, 향상된 for문(Enhanced for statement))
+		 * 2. 반복문 
+		 * - 특정 코드를 개발자가 원하는 횟수만큼 반복 제어 
+		 * a. for 
+		 * b. while 
+		 * c. do while 
+		 * d. for(for each, 향상된 for문(Enhanced for statement))
 		 * 
-		 * 3. 분기문 - 개발자가 코드의 흐름을 원하는 곳으로 이동 a. break b. continue c. goto(JDK 1.5 폐기) >
-		 * 가독성 저해
+		 * 3. 분기문 
+		 * - 개발자가 코드의 흐름을 원하는 곳으로 이동 
+		 * a. break 
+		 * b. continue 
+		 * c. goto(JDK 1.5 폐기) > 가독성 저해
 		 * 
 		 */
 
@@ -38,11 +49,13 @@ public class Ex27_if {
 		 * 
 		 * 자바 > C계열 언어
 		 * 
-		 * 조건식 - 조건식은 반드시 boolean을 가진다.(자바)
+		 * 조건식 
+		 * - 조건식은 반드시 boolean을 가진다.(자바)
 		 * 
-		 * - 정수: 0(false), 1(ture), 0이 아닌 모든 정수(true) - 실수: 0.0(false), 0이 아닌 모든
-		 * 실수(true) - 문자: \0(null 문자)(false), 그 이외의 모든 문자(true) - 문자열: ""(빈 문자열)(false),
-		 * 그 이외의 모든 문자열(true)
+		 * - 정수: 0(false), 1(true), 0이 아닌 모든 정수(true) 
+		 * - 실수: 0.0(false), 0이 아닌 모든 실수(true) 
+		 * - 문자: \0(null 문자)(false), 그 이외의 모든 문자(true) 
+		 * - 문자열: ""(빈 문자열)(false), 그 이외의 모든 문자열(true)
 		 * 
 		 * int num = 100;
 		 * 
@@ -109,7 +122,7 @@ public class Ex27_if {
 
 		Scanner scan = new Scanner(System.in);
 
-		// 쇼핑몰 > 의류 > 색상 선택(빨강, 파랑, 노랑
+		// 쇼핑몰 > 의류 > 색상 선택(빨강, 파랑, 노랑)
 		System.out.println("색상 입력: ");
 
 		String color = scan.nextLine();
@@ -193,7 +206,9 @@ public class Ex27_if {
 	private static void m1() {
 
 		/*
-		 * if문 - 개발자가 조건(boolean)을 제시 > 결과에 따라 흐름을 제어 - 조건식 > boolean값을 가지는 표현식
+		 * if문 
+		 * - 개발자가 조건(boolean)을 제시 > 결과에 따라 흐름을 제어 
+		 * - 조건식 > boolean값을 가지는 표현식
 		 * 
 		 * if (조건식) { 문장; }
 		 * 

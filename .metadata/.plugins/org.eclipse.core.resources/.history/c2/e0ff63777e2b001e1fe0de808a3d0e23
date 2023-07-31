@@ -1,0 +1,38 @@
+package com.test.question;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Q066 {
+	public static void main(String[] args) {
+		int[] nums = new int[6];
+
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = (int) (Math.random() * 45) + 1;
+		}
+
+		useSet(nums);
+	}
+
+	private static void useSet(int[] nums) {
+		Set<Integer> set = new HashSet<>();
+
+		int index = 0;
+		int randomNum = 0;
+		
+		while (index < nums.length) {
+			randomNum = (int) (Math.random() * 45) + 1;
+
+			if (set.contains(randomNum))
+				continue;
+
+			set.add(randomNum);
+			nums[index++] = randomNum;
+		}
+		
+		Arrays.sort(nums);
+		
+		System.out.println(Arrays.toString(nums));
+	}
+}

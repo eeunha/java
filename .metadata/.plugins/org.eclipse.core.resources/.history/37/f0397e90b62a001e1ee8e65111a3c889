@@ -1,0 +1,10 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+public class Q012 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+	}
+}

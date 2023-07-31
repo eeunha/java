@@ -1,0 +1,18 @@
+package com.test.question;
+
+public class Q010 {
+	public static void main(String[] args) {
+		digit(1);
+		digit(12);
+		digit(321);
+		digit(5678);
+		digit(98765);
+	}
+
+	private static void digit(int num) {
+		// TODO Auto-generated method stub
+		String result = "";
+		
+		System.out.println(num+" → "+result);
+	}
+}

@@ -1,0 +1,19 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+public class Q067 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int[] nums = new int[10];
+		
+		System.out.print("삽입 위치: ");
+		int index = scan.nextInt();
+		
+		System.out.print("값: ");
+		int value = scan.nextInt();
+		
+		
+	}
+}

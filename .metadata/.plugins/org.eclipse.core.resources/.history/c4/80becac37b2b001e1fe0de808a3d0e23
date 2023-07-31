@@ -1,0 +1,8 @@
+package com.test.question;
+
+public class Q064 {
+	public static void main(String[] args) {
+		int[] nums = new int[20];
+
+	}
+}

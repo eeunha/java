@@ -1,0 +1,19 @@
+package com.test.java.obj;
+
+//2023.07.31
+public class Ex36_Class {
+	public static void main(String[] args) {
+		// Ex36_Class.java
+
+		// 언어의 성향
+		// 1. 절차 지향 프로그래밍
+		// 2. 함수 지향 프로그래밍
+		// 3. 객체 지향 프로그래밍
+
+		// 자바
+		// - 객체 지향 프로그래밍 언어, Object Oriented Programming
+		// - OOP
+		// - 객체를 선호하는 프로그래밍 방식의 언어
+
+	}// main
+}
