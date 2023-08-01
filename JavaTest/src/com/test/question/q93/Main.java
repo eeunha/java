@@ -77,7 +77,7 @@ public class Main {
 		Note note = new Note();
 
 		note.setSize("B4");
-//		note.setColor("노란색");
+		note.setColor("노란색");
 		note.setPage(25);
 		note.setOwner("홍길동");
 
@@ -91,5 +91,7 @@ public class Main {
 		note2.setPage(100);
 
 		System.out.println(note2.info());
+		
+		NoteAnswer note3 = new NoteAnswer();
 	}
 }

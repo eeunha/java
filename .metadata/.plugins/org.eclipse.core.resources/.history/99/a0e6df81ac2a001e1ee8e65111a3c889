@@ -1,8 +1,0 @@
-package com.test.question;
-
-public class Q053 {
-	public static void main(String[] args) {
-		//2중 for문 2번 또는
-		//3중 for문 1번
-	}
-}

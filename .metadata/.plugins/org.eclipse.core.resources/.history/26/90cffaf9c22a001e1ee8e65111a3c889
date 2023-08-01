@@ -1,7 +1,0 @@
-package com.test.question;
-
-public class Q060 {
-	public static void main(String[] args) {
-		// 등비수열
-	}
-}

@@ -7,7 +7,7 @@ class Note {
 	private String owner;
 	private int price;
 
-	// setter, getter 구현
+	// setter, getter 구현 -> Alt + Shift + S
 
 	public String info() {
 		String result = "■■■■■■ 노트 정보 ■■■■■■\n";
@@ -53,9 +53,7 @@ class Note {
 		// 색상 변경
 		if (this.color.equals("검정색")) {
 			price += 100;
-		} else if (this.color.equals("노란색")) {
-			price += 200;
-		} else if (this.color.equals("파란색")) {
+		} else if (this.color.equals("노란색") || this.color.equals("파란색")) {
 			price += 200;
 		}
 
@@ -65,7 +63,8 @@ class Note {
 			price += additionalPage * 10;
 		}
 
-		return price;
+		this.price = price;
+		return this.price;
 	}
 
 	private String checkThickness() {
@@ -110,10 +109,22 @@ class Note {
 	}
 
 	public void setOwner(String owner) {
-		if (owner.length() >= 2 && owner.length() <= 5) {
-			this.owner = owner;
-		} else {
-			System.out.println("올바르지 않은 소유자이름");
+		// 한글인지도 검사하기
+
+		if (owner.length() < 2 || owner.length() > 5) {
+			return;
 		}
+
+		// 한글 검사
+		for (int i = 0; i < owner.length(); i++) {
+
+			char c = owner.charAt(i);
+
+			if (c < '가' || c > '힣') {
+				return;
+			}
+		}
+
+		this.owner = owner;
 	}
 }

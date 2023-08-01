@@ -16,11 +16,19 @@ class Book {
 	}
 
 	public void setTitle(String title) {
-		if (title.length() >= 0 && title.length() <= 50) {
-			this.title = title;
-		} else {
-			System.out.println("부적절한 책 제목 길이");
+		if (title.length() > 50) {
+			return;
 		}
+
+		for (int i = 0; i < title.length(); i++) {
+			char c = title.charAt(i);
+
+			if ((c < '가' || c > '힣') && (c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c < '0' || c > '9')) {
+				return;
+			}
+		}
+
+		this.title = title;
 	}
 
 	public int getPrice() {
@@ -28,10 +36,8 @@ class Book {
 	}
 
 	public void setPrice(int price) {
-		if (price >= 0 && price <= 100000) {
+		if (price >= 0 && price <= 1000000) {
 			this.price = price;
-		} else {
-			System.out.println("부적절한 가격");
 		}
 	}
 
@@ -66,9 +72,7 @@ class Book {
 	public void setPage(int page) {
 		if (page >= 1) {
 			this.page = page;
-		} else {
-			System.out.println("부적절한 페이지 수");
-		}
+		} 
 	}
 
 	// dump
