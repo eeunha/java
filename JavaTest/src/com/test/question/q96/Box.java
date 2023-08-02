@@ -45,20 +45,8 @@ class Box {
 		for (int i = 0; i < list.length; i++) {
 			Macaron m = list[i];
 
-			// 크기 검사
-			if (m.getSize() < 8 || m.getSize() > 14) {
-				m.setOx("불합격");
-				continue;
-			}
-
-			// 색상 검사
-			if (m.getColor().equals("black")) {
-				m.setOx("불합격");
-				continue;
-			}
-
-			// 두께 검사
-			if (m.getThickness() < 3 || m.getThickness() > 18) {
+			if (m.getSize() < 8 || m.getSize() > 14 || m.getColor().equals("black") || m.getThickness() < 3
+					|| m.getThickness() > 18) {
 				m.setOx("불합격");
 				continue;
 			}

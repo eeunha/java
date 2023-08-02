@@ -2,7 +2,7 @@ package com.test.question;
 
 /*
 
-2023.08.02
+2023.07.27
 
 Q. 아래와 같이 출력하시오.
 
@@ -91,48 +91,48 @@ validPos(int curPos, int maxRange){
 3. 변경된 좌표가 범위를 벗어나는지 검사하기
 4.1 벗어난다면 
 */
-public class Q079 {
+public class Q079_before {
 	public static void main(String[] args) {
 		int maxRange = 3;
 		int[][] nums = new int[maxRange][maxRange];
 
 		int value = 1;
-		int maxValue = maxRange * maxRange;
+		int maxValue = 9;
 
 		int i = 0;
 		int j = 0;
-
-		int lastI = 0;
-		int lastJ = 0;
-
+		
 		while (value <= maxValue) {
 			if (value == 1) { // 예외사항
 				i = 1;
 				j = 2;
 				nums[i][j] = value;
+				System.out.printf("nums[%d][%d] = %d\n\n", i, j, nums[i][j]);
 				value++;
 				continue;
 			}
-
-			// 이전 값 지정
-			lastI = i;
-			lastJ = j;
-
 			// 값 변경
 			i--;
 			j++;
+			System.out.printf("first (%d, %d)\n", i, j);
 
 			// 값 유효성 및 재설정
 			i = validPos(i, maxRange);
 			j = validPos(j, maxRange);
+			System.out.printf("changed (%d, %d)\n", i, j);
 
-			if (nums[i][j] != 0) { // [i,j]가 비어있는가?
-				i = lastI;
-				j = lastJ - 1;
+			if (nums[i][j] == 0) { // [i,j]가 비어있는가?
+				nums[i][j] = value;
+			} else { // 값이 존재하는 경우
+				i++;
+				j -= 2;
+				nums[i][j] = value; // 이전 좌표로 이동 + j-1
 			}
-			nums[i][j] = value;
 
+			System.out.printf("nums[%d][%d] = %d\n", i, j, nums[i][j]);
 			value++;
+			System.out.println(value);
+			System.out.println();
 		}
 
 		printArr(nums);
@@ -152,8 +152,8 @@ public class Q079 {
 
 	private static void printArr(int[][] nums) {
 		// 출력 > 수정없이 그대로 사용
-		for (int i = 0; i < nums.length; i++) {
-			for (int j = 0; j < nums[0].length; j++) {
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
 				System.out.printf("%5d", nums[i][j]);
 			}
 			System.out.println();

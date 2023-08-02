@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 class Bugles {
 	private int price;
-	private int size;
+	private int weight;
 	private Calendar creationTime;
 	private int expiration;
 
@@ -28,23 +28,33 @@ class Bugles {
 			this.expiration = 15;
 		}
 
-		this.size = size;
+		this.weight = size;
 	}
 
 	public void setCreationTime(String creationTime) {
 		Calendar day = Calendar.getInstance();
+
+		day.set(Integer.parseInt(creationTime.substring(0, 4)), Integer.parseInt(creationTime.substring(5, 7)) - 1,
+				Integer.parseInt(creationTime.substring(8)));
+
+//		System.out.printf("%tF\n", day);
 		
-		day.set();
-		
-		this.creationTime = creationTime;
+		this.creationTime = day;
 	}
 
 	public int getExpiration() {
-		return expiration;
+		Calendar now = Calendar.getInstance();
+
+		return this.expiration
+				- (int) ((now.getTimeInMillis() - this.creationTime.getTimeInMillis()) / 1000 / 60 / 60 / 24);
 	}
 
 	public void eat() {
-
+		if (getExpiration() >= 0) {
+			System.out.println("과자를 맛있게 먹습니다.\n");
+		} else {
+			System.out.println("유통기한이 지나 먹을 수 없습니다.\n");
+		}
 	}
 
 	// getter, setter 구현
