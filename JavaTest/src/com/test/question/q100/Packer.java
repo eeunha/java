@@ -1,10 +1,10 @@
 package com.test.question.q100;
 
 public class Packer {
-	static int pencilCount = 0;
-	static int eraserCount = 0;
-	static int ballPointPenCount = 0;
-	static int rulerCount = 0;
+	private static int pencilCount = 0;
+	private static int eraserCount = 0;
+	private static int ballPointPenCount = 0;
+	private static int rulerCount = 0;
 
 	void packing(Pencil pencil) {
 		System.out.println("포장 전 검수 : " + pencil.getHardness() + " 진하기 연필입니다.");
@@ -31,7 +31,7 @@ public class Packer {
 	void packing(BallPointPen ballPointPen) {
 		System.out.printf("포장 전 검수 : %s 색상 %.1fmm 볼펜입니다.\n", ballPointPen.getColor(), ballPointPen.getThickness());
 
-		if (!ballPointPen.getColor().equals("red") && !ballPointPen.getColor().equals("blud")
+		if (!ballPointPen.getColor().equals("red") && !ballPointPen.getColor().equals("blue")
 				&& !ballPointPen.getColor().equals("green") && !ballPointPen.getColor().equals("black")) {
 			return;
 		}

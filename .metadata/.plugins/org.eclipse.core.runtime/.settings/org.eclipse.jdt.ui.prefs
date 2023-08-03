@@ -12,6 +12,7 @@ org.eclipse.jdt.ui.formatterprofiles.version=21
 org.eclipse.jdt.ui.gettersetter.use.is=true
 org.eclipse.jdt.ui.overrideannotation=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="false" context\="java-statements" deleted\="false" description\="try catch block" enabled\="true" id\="org.eclipse.jdt.ui.templates.try" name\="try_catch">try {\r\n\t${line_selection}${cursor}\r\n} catch (${Exception} ${exception_variable_name}) {\r\n\tSystem.out.println("at ${primary_type_name}.${enclosing_method}");\r\n   e.printStackTrace();\r\n}</template><template autoinsert\="true" context\="java" deleted\="false" description\="\uC218\uC5C5" enabled\="true" name\="Scanner">Scanner scan \= new Scanner(System.in);</template><template autoinsert\="true" context\="java" deleted\="false" description\="\uC218\uC5C5" enabled\="true" name\="scanner">Scanner scan \= new Scanner(System.in);</template></templates>
 sourceHoverBackgroundColor=255,255,225
 spelling_ignore_ampersand_in_properties=true
 spelling_ignore_digits=true

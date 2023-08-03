@@ -23,10 +23,13 @@ class Refrigerator {
 			item = items[i];
 
 			if (item.getName().equals(name)) {
-				for (int j = i; j < this.idx - 1; j++) {
+//				for (int j = i; j < this.idx - 1; j++) {
+//					items[j] = items[j + 1];
+//				}
+//				items[items.length - 1] = null;
+				for (int j = i; j < this.idx; j++) {
 					items[j] = items[j + 1];
 				}
-				items[items.length - 1] = null;
 				this.idx--;
 				break;
 			}
