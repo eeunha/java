@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Scanner;
 
 /*
-	23.08.07
+	23.08.08
 	
 	Q. 지정한 폴더의 특정 파일(확장자)만을 출력하시오.
 	
