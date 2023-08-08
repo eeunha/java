@@ -65,6 +65,8 @@ public class Q122 {
 
 				passer.add(temp[0]);
 			}
+			
+			reader.close();
 
 			System.out.println("[합격자]");
 			for (int i = 0; i < passer.size(); i++) {
