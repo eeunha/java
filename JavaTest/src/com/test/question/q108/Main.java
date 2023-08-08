@@ -69,7 +69,6 @@ System.out.println(list.size());
 하하하 
 
 0 //초기화
-
 */
 public class Main {
 	public static void main(String[] args) {

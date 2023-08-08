@@ -37,16 +37,25 @@ public class Q111 {
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("폴더 : ");
-		String folder = scan.nextLine();
+		String path = scan.nextLine();
 
 		System.out.print("확장자 : ");
-		String extension = scan.nextLine();
+		String ext = scan.nextLine();
 
-		File dir = new File(folder);
+		File dir = new File(path);
 
-		if (!dir.exists())
-			return;
+		if (dir.exists()) {
+			File[] list = dir.listFiles();
 
-		
+			for (File f : list) {
+				if (f.isFile()) {
+					String fName = f.getName();
+					if (fName.endsWith(ext)) {
+						System.out.println(fName);
+					}
+				}
+			}
+		}
+
 	}
 }
