@@ -65,19 +65,25 @@ public class Q122 {
 
 				passer.add(temp[0]);
 			}
-			
+
 			reader.close();
 
 			System.out.println("[합격자]");
-			for (int i = 0; i < passer.size(); i++) {
-				System.out.println(passer.get(i));
+			for (String pass : passer) {
+				System.out.println(pass);
 			}
+//			for (int i = 0; i < passer.size(); i++) {
+//				System.out.println(passer.get(i));
+//			}
 			System.out.println();
-			
+
 			System.out.println("[불합격자]");
-			for (int i = 0; i < unqualified.size(); i++) {
-				System.out.println(unqualified.get(i));
+			for (String unqual : unqualified) {
+				System.out.println(unqual);
 			}
+//			for (int i = 0; i < unqualified.size(); i++) {
+//				System.out.println(unqualified.get(i));
+//			}
 
 		} catch (Exception e) {
 			System.out.println("at Q122.main");

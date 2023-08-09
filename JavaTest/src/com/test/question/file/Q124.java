@@ -68,7 +68,7 @@ public class Q124 {
 			while ((line = orderReader.readLine()) != null) {
 				String[] temp = line.split(",");
 //				System.out.println(Arrays.toString(temp));
-				if (temp[3].equals(userNumber + "")) {
+				if (temp[3].equals(userNumber)) {
 					System.out.printf("%s\t%s\t%s\t%s\t%s\t\n", temp[0], userName, temp[1], temp[2], userAddr);
 				}
 			}
