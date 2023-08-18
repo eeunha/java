@@ -16,7 +16,7 @@ public class Data {
 
 	public static void load() {
 
-		try {
+		try { 
 			BufferedReader reader = new BufferedReader(new FileReader("data\\student.txt"));
 
 			String line = null;
