@@ -6,20 +6,34 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
+		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
-		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="isRegEx" value="true"/>
+		<item key="selection" value="  홍길동"/>
 		<list key="findhistory">
-			<item value=""/>
+			<item value="\s{1,}홍길동"/>
+			<item value="\s{1,}홍길동\s"/>
+			<item value="^홍길동"/>
+			<item value="\s{2}홍길동\s{2}"/>
+			<item value="\s홍길동\s"/>
+			<item value="010-\d{3,4}-\d{4}"/>
+			<item value="[A-Z][A-Za-z0-9_]*"/>
+			<item value="[A-Z][A-Za-z0-9_]{1,}"/>
+			<item value="[A-Z][A-Za-z]{4,}"/>
+			<item value="[A-Z][A-Za-z_]{4,}"/>
+			<item value="[A-Za-z]{5,}"/>
+			<item value="[가-힣]{2,4}"/>
+			<item value="010-[0-9]{3,4}-[0-9]{4}"/>
+			<item value="[0-9]{6}-[0-9]{7}"/>
+			<item value="[^0-9]+"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="343"/>
-		<item key="DIALOG_Y_ORIGIN" value="263"/>
+		<item key="DIALOG_X_ORIGIN" value="723"/>
+		<item key="DIALOG_Y_ORIGIN" value="432"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
